@@ -57,14 +57,14 @@ func TestSplit(t *testing.T) {
 		`a "b c \\"`,
 	}
 	want := [][]string{
-		[]string{"a", "b", "c"},
-		[]string{"a", `"b c"`},
-		[]string{"a", `'b c'`},
-		[]string{"a", `'b c'`, `"d e"`, "f"},
-		[]string{"a", `"b'c"`},
-		[]string{"a", `'b" c'`},
-		[]string{"a", `"b\" \"c"`},
-		[]string{"a", `"b c \\"`},
+		{"a", "b", "c"},
+		{"a", `"b c"`},
+		{"a", `'b c'`},
+		{"a", `'b c'`, `"d e"`, "f"},
+		{"a", `"b'c"`},
+		{"a", `'b" c'`},
+		{"a", `"b\" \"c"`},
+		{"a", `"b c \\"`},
 	}
 
 	for i, s := range base {
