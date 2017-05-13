@@ -10,11 +10,11 @@ import (
 
 func ExampleSplit() {
 	// here is a somewhat complex command line to execute
-	fullCommand := `echo -e 'Starting LS\n===========' && ls -la && echo -e "===========\nI'm Done."`
+	str := `echo -e 'Starting LS\n===========' && ls -la && echo -e "===========\nI'm Done."`
 
 	// split the string, so we can run this on
 	// the command line...
-	cmmd, args := Split(fullCommand)
+	cmmd, args := Split(str)
 
 	// you should be checking errors, even though
 	// I don't here. run it!
